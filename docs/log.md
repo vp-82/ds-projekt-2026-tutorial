@@ -33,3 +33,13 @@ A row with only one of VELO_IN or VELO_OUT counts the missing side as 0, because
 - Four tests green.
 - The same table after deleting `data/derived` and rebuilding (367 place-years).
 - 44 places, 5 of them reporting in every year from 2010 to 2025, as in the notebook.
+
+## AI use · 2026-10-08 · CI workflow
+
+**Delegated:** the workflow `.github/workflows/tests.yml`, set up as in the uv guide for GitHub Actions (setup-uv v9.0.0, uv 0.12.23, cache on, `uv sync --locked --dev`, `uv run pytest tests`).
+
+**Mine:** tests run on every pull request and every push to main; CI does not run `uv run build`, because it downloads the full raw file; the setup-uv version follows the uv docs example; local uv stays at 0.7.12 and `uv.lock` is not regenerated for CI.
+
+**Checks passed:**
+- `uv sync --locked --dev` and `uv run pytest tests` locally with uv 0.7.12: four tests green.
+- `uv sync --locked --dev` locally with uv 0.12.23 accepts the existing `uv.lock`.
