@@ -6,3 +6,15 @@ dependencies = [
     "marimo>=0.25.1",
     "polars>=2.0.0",
 ]
+
+[project.scripts]
+build = "ds_projekt_2026_tutorial.build:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+]
