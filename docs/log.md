@@ -6,7 +6,7 @@
 
 **Test:** count the sites per year and how many appear in every year, using the all-years file from the city's open data portal.
 
-**Result:** 0% of site IDs report in every year, against the expected 80%. The check showed why: the 85 bike site IDs sit on 44 places, and a place gets a new ID every few years.
+**Result:** 0% of site IDs report in every year, against the expected 80%. The check showed why: the 85 bike site IDs sit on 44 places, and a place gets a new ID every few years. Counted by place, 5 of the 44 places (11%) report bikes in every complete year, 2010 to 2025.
 
 **Decision:** the unit of the table is the place, identified by its coordinates, not the site ID.
 

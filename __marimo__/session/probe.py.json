@@ -97,6 +97,26 @@
           "mimetype": "text/plain"
         }
       ]
+    },
+    {
+      "id": "NBfH",
+      "code_hash": "0285a6acea141372974c360de9060e0f",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='NBfH-0' random-id='3bd20b70-a73b-fbf7-9efe-a3ec516e456d'><marimo-table data-initial-value='[]' data-label='null' data-data='&quot;[{&#92;&quot;OST&#92;&quot;:2682873,&#92;&quot;NORD&#92;&quot;:1245891,&#92;&quot;n_years&#92;&quot;:16},{&#92;&quot;OST&#92;&quot;:2684006,&#92;&quot;NORD&#92;&quot;:1246566,&#92;&quot;n_years&#92;&quot;:16},{&#92;&quot;OST&#92;&quot;:2683573,&#92;&quot;NORD&#92;&quot;:1248545,&#92;&quot;n_years&#92;&quot;:16},{&#92;&quot;OST&#92;&quot;:2682375,&#92;&quot;NORD&#92;&quot;:1247055,&#92;&quot;n_years&#92;&quot;:16},{&#92;&quot;OST&#92;&quot;:2682933,&#92;&quot;NORD&#92;&quot;:1248821,&#92;&quot;n_years&#92;&quot;:16},{&#92;&quot;OST&#92;&quot;:2681857,&#92;&quot;NORD&#92;&quot;:1251991,&#92;&quot;n_years&#92;&quot;:14},{&#92;&quot;OST&#92;&quot;:2682881,&#92;&quot;NORD&#92;&quot;:1246549,&#92;&quot;n_years&#92;&quot;:12},{&#92;&quot;OST&#92;&quot;:2683457,&#92;&quot;NORD&#92;&quot;:1247065,&#92;&quot;n_years&#92;&quot;:12},{&#92;&quot;OST&#92;&quot;:2681385,&#92;&quot;NORD&#92;&quot;:1247736,&#92;&quot;n_years&#92;&quot;:12},{&#92;&quot;OST&#92;&quot;:2682731,&#92;&quot;NORD&#92;&quot;:1247708,&#92;&quot;n_years&#92;&quot;:12}]&quot;' data-total-rows='42' data-total-columns='3' data-max-columns='50' data-banner-text='&quot;&quot;' data-pagination='true' data-page-size='10' data-field-types='[[&quot;OST&quot;,[&quot;integer&quot;,&quot;i64&quot;]],[&quot;NORD&quot;,[&quot;integer&quot;,&quot;i64&quot;]],[&quot;n_years&quot;,[&quot;integer&quot;,&quot;u32&quot;]]]' data-show-filters='true' data-show-download='true' data-show-search='true' data-show-column-summaries='true' data-show-data-types='true' data-show-page-size-selector='true' data-show-column-explorer='true' data-show-chart-builder='true' data-row-headers='[]' data-hidden-columns='[]' data-has-stable-row-id='false' data-lazy='false' data-preload='false'></marimo-table></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "5 of 44 places report bikes in every year 2010-2025\n",
+          "mimetype": "text/plain"
+        }
+      ]
     }
   ]
 }

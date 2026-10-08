@@ -77,5 +77,21 @@ def _(bike, pl):
     return
 
 
+@app.cell
+def _(bike, pl):
+    # place = coordinate pair (OST, NORD), taken as is; complete years 2010-2025
+    years_per_place = (
+        bike.filter(pl.col("year").is_between(2010, 2025))
+        .group_by("OST", "NORD")
+        .agg(pl.col("year").n_unique().alias("n_years"))
+        .sort("n_years", descending=True)
+    )
+    n_places = bike.select("OST", "NORD").unique().height
+    n_places_every = (years_per_place["n_years"] == 16).sum()
+    print(n_places_every, "of", n_places, "places report bikes in every year 2010-2025")
+    years_per_place
+    return
+
+
 if __name__ == "__main__":
     app.run()
