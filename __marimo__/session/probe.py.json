@@ -1,0 +1,102 @@
+{
+  "version": "1",
+  "metadata": {
+    "marimo_version": "0.25.1",
+    "script_metadata_hash": null
+  },
+  "cells": [
+    {
+      "id": "Hbol",
+      "code_hash": "e18298b49efe2a020377e639ae8d7a06",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='Hbol-0' random-id='fc24013e-0f6f-7642-dc55-f2b18d617b7d'><marimo-table data-initial-value='[]' data-label='null' data-data='&quot;[{&#92;&quot;FK_STANDORT&#92;&quot;:5,&#92;&quot;DATUM&#92;&quot;:&#92;&quot;2009-12-02T00:00&#92;&quot;,&#92;&quot;VELO_IN&#92;&quot;:2,&#92;&quot;VELO_OUT&#92;&quot;:3,&#92;&quot;FUSS_IN&#92;&quot;:null,&#92;&quot;FUSS_OUT&#92;&quot;:null,&#92;&quot;OST&#92;&quot;:2682933,&#92;&quot;NORD&#92;&quot;:1248821},{&#92;&quot;FK_STANDORT&#92;&quot;:5,&#92;&quot;DATUM&#92;&quot;:&#92;&quot;2009-12-02T00:15&#92;&quot;,&#92;&quot;VELO_IN&#92;&quot;:0,&#92;&quot;VELO_OUT&#92;&quot;:2,&#92;&quot;FUSS_IN&#92;&quot;:null,&#92;&quot;FUSS_OUT&#92;&quot;:null,&#92;&quot;OST&#92;&quot;:2682933,&#92;&quot;NORD&#92;&quot;:1248821},{&#92;&quot;FK_STANDORT&#92;&quot;:5,&#92;&quot;DATUM&#92;&quot;:&#92;&quot;2009-12-02T00:30&#92;&quot;,&#92;&quot;VELO_IN&#92;&quot;:0,&#92;&quot;VELO_OUT&#92;&quot;:0,&#92;&quot;FUSS_IN&#92;&quot;:null,&#92;&quot;FUSS_OUT&#92;&quot;:null,&#92;&quot;OST&#92;&quot;:2682933,&#92;&quot;NORD&#92;&quot;:1248821},{&#92;&quot;FK_STANDORT&#92;&quot;:5,&#92;&quot;DATUM&#92;&quot;:&#92;&quot;2009-12-02T00:45&#92;&quot;,&#92;&quot;VELO_IN&#92;&quot;:0,&#92;&quot;VELO_OUT&#92;&quot;:2,&#92;&quot;FUSS_IN&#92;&quot;:null,&#92;&quot;FUSS_OUT&#92;&quot;:null,&#92;&quot;OST&#92;&quot;:2682933,&#92;&quot;NORD&#92;&quot;:1248821},{&#92;&quot;FK_STANDORT&#92;&quot;:5,&#92;&quot;DATUM&#92;&quot;:&#92;&quot;2009-12-02T01:00&#92;&quot;,&#92;&quot;VELO_IN&#92;&quot;:0,&#92;&quot;VELO_OUT&#92;&quot;:0,&#92;&quot;FUSS_IN&#92;&quot;:null,&#92;&quot;FUSS_OUT&#92;&quot;:null,&#92;&quot;OST&#92;&quot;:2682933,&#92;&quot;NORD&#92;&quot;:1248821}]&quot;' data-total-rows='5' data-total-columns='8' data-max-columns='50' data-banner-text='&quot;&quot;' data-pagination='false' data-page-size='10' data-field-types='[[&quot;FK_STANDORT&quot;,[&quot;integer&quot;,&quot;i64&quot;]],[&quot;DATUM&quot;,[&quot;string&quot;,&quot;str&quot;]],[&quot;VELO_IN&quot;,[&quot;integer&quot;,&quot;i64&quot;]],[&quot;VELO_OUT&quot;,[&quot;integer&quot;,&quot;i64&quot;]],[&quot;FUSS_IN&quot;,[&quot;integer&quot;,&quot;i64&quot;]],[&quot;FUSS_OUT&quot;,[&quot;integer&quot;,&quot;i64&quot;]],[&quot;OST&quot;,[&quot;integer&quot;,&quot;i64&quot;]],[&quot;NORD&quot;,[&quot;integer&quot;,&quot;i64&quot;]]]' data-show-filters='true' data-show-download='true' data-show-search='true' data-show-column-summaries='false' data-show-data-types='true' data-show-page-size-selector='false' data-show-column-explorer='true' data-show-chart-builder='true' data-row-headers='[]' data-hidden-columns='[]' data-has-stable-row-id='false' data-lazy='false' data-preload='false'></marimo-table></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "['FK_STANDORT', 'DATUM', 'VELO_IN', 'VELO_OUT', 'FUSS_IN', 'FUSS_OUT', 'OST', 'NORD']\n15508605 rows\n",
+          "mimetype": "text/plain"
+        }
+      ]
+    },
+    {
+      "id": "ALGV",
+      "code_hash": "b15a56a1c06d6842d82980ca097e68af",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='ALGV-0' random-id='24c11af7-1f03-f135-e999-12e71c735cdf'><marimo-table data-initial-value='[]' data-label='null' data-data='&quot;[{&#92;&quot;FK_STANDORT&#92;&quot;:33,&#92;&quot;n_coords&#92;&quot;:1},{&#92;&quot;FK_STANDORT&#92;&quot;:27,&#92;&quot;n_coords&#92;&quot;:1},{&#92;&quot;FK_STANDORT&#92;&quot;:15,&#92;&quot;n_coords&#92;&quot;:1},{&#92;&quot;FK_STANDORT&#92;&quot;:9,&#92;&quot;n_coords&#92;&quot;:1},{&#92;&quot;FK_STANDORT&#92;&quot;:5002,&#92;&quot;n_coords&#92;&quot;:1},{&#92;&quot;FK_STANDORT&#92;&quot;:36,&#92;&quot;n_coords&#92;&quot;:1},{&#92;&quot;FK_STANDORT&#92;&quot;:3281,&#92;&quot;n_coords&#92;&quot;:1},{&#92;&quot;FK_STANDORT&#92;&quot;:6,&#92;&quot;n_coords&#92;&quot;:1},{&#92;&quot;FK_STANDORT&#92;&quot;:39,&#92;&quot;n_coords&#92;&quot;:1},{&#92;&quot;FK_STANDORT&#92;&quot;:2641,&#92;&quot;n_coords&#92;&quot;:1}]&quot;' data-total-rows='171' data-total-columns='2' data-max-columns='50' data-banner-text='&quot;&quot;' data-pagination='true' data-page-size='10' data-field-types='[[&quot;FK_STANDORT&quot;,[&quot;integer&quot;,&quot;i64&quot;]],[&quot;n_coords&quot;,[&quot;integer&quot;,&quot;u32&quot;]]]' data-show-filters='true' data-show-download='true' data-show-search='true' data-show-column-summaries='true' data-show-data-types='true' data-show-page-size-selector='true' data-show-column-explorer='true' data-show-chart-builder='true' data-row-headers='[]' data-hidden-columns='[]' data-has-stable-row-id='false' data-lazy='false' data-preload='false'></marimo-table></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "171 sites\n0 sites with more than one coordinate pair\n",
+          "mimetype": "text/plain"
+        }
+      ]
+    },
+    {
+      "id": "WOAb",
+      "code_hash": "8ce1344771ed0924bf04c72d52096df1",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='WOAb-0' random-id='67730882-884b-7fd3-7a33-8ab435ea191a'><marimo-table data-initial-value='[]' data-label='null' data-data='&quot;[{&#92;&quot;year&#92;&quot;:2009,&#92;&quot;bike_sites&#92;&quot;:1},{&#92;&quot;year&#92;&quot;:2010,&#92;&quot;bike_sites&#92;&quot;:11},{&#92;&quot;year&#92;&quot;:2011,&#92;&quot;bike_sites&#92;&quot;:11},{&#92;&quot;year&#92;&quot;:2012,&#92;&quot;bike_sites&#92;&quot;:12},{&#92;&quot;year&#92;&quot;:2013,&#92;&quot;bike_sites&#92;&quot;:13},{&#92;&quot;year&#92;&quot;:2014,&#92;&quot;bike_sites&#92;&quot;:21},{&#92;&quot;year&#92;&quot;:2015,&#92;&quot;bike_sites&#92;&quot;:21},{&#92;&quot;year&#92;&quot;:2016,&#92;&quot;bike_sites&#92;&quot;:24},{&#92;&quot;year&#92;&quot;:2017,&#92;&quot;bike_sites&#92;&quot;:28},{&#92;&quot;year&#92;&quot;:2018,&#92;&quot;bike_sites&#92;&quot;:33}]&quot;' data-total-rows='18' data-total-columns='2' data-max-columns='50' data-banner-text='&quot;&quot;' data-pagination='true' data-page-size='10' data-field-types='[[&quot;year&quot;,[&quot;integer&quot;,&quot;i32&quot;]],[&quot;bike_sites&quot;,[&quot;integer&quot;,&quot;u32&quot;]]]' data-show-filters='true' data-show-download='true' data-show-search='true' data-show-column-summaries='true' data-show-data-types='true' data-show-page-size-selector='true' data-show-column-explorer='true' data-show-chart-builder='true' data-row-headers='[]' data-hidden-columns='[]' data-has-stable-row-id='false' data-lazy='false' data-preload='false'></marimo-table></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "85 bike sites in total, 0 in every one of 18 years: 0.0 %\n",
+          "mimetype": "text/plain"
+        }
+      ]
+    },
+    {
+      "id": "DTbo",
+      "code_hash": "fae6eb8213f29971a2892089033c4fb2",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='DTbo-0' random-id='eff16f08-a8dd-1e8f-83c7-b57fb0c6cb40'><marimo-table data-initial-value='[]' data-label='null' data-data='&quot;[{&#92;&quot;FK_STANDORT&#92;&quot;:5,&#92;&quot;first_year&#92;&quot;:2009,&#92;&quot;last_year&#92;&quot;:2018,&#92;&quot;n_years&#92;&quot;:10,&#92;&quot;span&#92;&quot;:10},{&#92;&quot;FK_STANDORT&#92;&quot;:6,&#92;&quot;first_year&#92;&quot;:2010,&#92;&quot;last_year&#92;&quot;:2018,&#92;&quot;n_years&#92;&quot;:9,&#92;&quot;span&#92;&quot;:9},{&#92;&quot;FK_STANDORT&#92;&quot;:7,&#92;&quot;first_year&#92;&quot;:2010,&#92;&quot;last_year&#92;&quot;:2018,&#92;&quot;n_years&#92;&quot;:9,&#92;&quot;span&#92;&quot;:9},{&#92;&quot;FK_STANDORT&#92;&quot;:8,&#92;&quot;first_year&#92;&quot;:2010,&#92;&quot;last_year&#92;&quot;:2018,&#92;&quot;n_years&#92;&quot;:9,&#92;&quot;span&#92;&quot;:9},{&#92;&quot;FK_STANDORT&#92;&quot;:9,&#92;&quot;first_year&#92;&quot;:2010,&#92;&quot;last_year&#92;&quot;:2019,&#92;&quot;n_years&#92;&quot;:10,&#92;&quot;span&#92;&quot;:10},{&#92;&quot;FK_STANDORT&#92;&quot;:10,&#92;&quot;first_year&#92;&quot;:2010,&#92;&quot;last_year&#92;&quot;:2018,&#92;&quot;n_years&#92;&quot;:9,&#92;&quot;span&#92;&quot;:9},{&#92;&quot;FK_STANDORT&#92;&quot;:12,&#92;&quot;first_year&#92;&quot;:2010,&#92;&quot;last_year&#92;&quot;:2018,&#92;&quot;n_years&#92;&quot;:9,&#92;&quot;span&#92;&quot;:9},{&#92;&quot;FK_STANDORT&#92;&quot;:13,&#92;&quot;first_year&#92;&quot;:2010,&#92;&quot;last_year&#92;&quot;:2019,&#92;&quot;n_years&#92;&quot;:10,&#92;&quot;span&#92;&quot;:10},{&#92;&quot;FK_STANDORT&#92;&quot;:52,&#92;&quot;first_year&#92;&quot;:2010,&#92;&quot;last_year&#92;&quot;:2020,&#92;&quot;n_years&#92;&quot;:11,&#92;&quot;span&#92;&quot;:11},{&#92;&quot;FK_STANDORT&#92;&quot;:53,&#92;&quot;first_year&#92;&quot;:2010,&#92;&quot;last_year&#92;&quot;:2020,&#92;&quot;n_years&#92;&quot;:11,&#92;&quot;span&#92;&quot;:11}]&quot;' data-total-rows='85' data-total-columns='5' data-max-columns='50' data-banner-text='&quot;&quot;' data-pagination='true' data-page-size='10' data-field-types='[[&quot;FK_STANDORT&quot;,[&quot;integer&quot;,&quot;i64&quot;]],[&quot;first_year&quot;,[&quot;integer&quot;,&quot;i32&quot;]],[&quot;last_year&quot;,[&quot;integer&quot;,&quot;i32&quot;]],[&quot;n_years&quot;,[&quot;integer&quot;,&quot;u32&quot;]],[&quot;span&quot;,[&quot;integer&quot;,&quot;i32&quot;]]]' data-show-filters='true' data-show-download='true' data-show-search='true' data-show-column-summaries='true' data-show-data-types='true' data-show-page-size-selector='true' data-show-column-explorer='true' data-show-chart-builder='true' data-row-headers='[]' data-hidden-columns='[]' data-has-stable-row-id='false' data-lazy='false' data-preload='false'></marimo-table></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "EOMQ",
+      "code_hash": "4a09ced029994f06e99767409d1cdd81",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='EOMQ-0' random-id='aff6f3ab-4141-28dc-1b84-c2f773665a0e'><marimo-table data-initial-value='[]' data-label='null' data-data='&quot;[{&#92;&quot;OST&#92;&quot;:2682375,&#92;&quot;NORD&#92;&quot;:1247055,&#92;&quot;site_ids&#92;&quot;:[10,3921,3924,4254,4259],&#92;&quot;n_sites&#92;&quot;:5},{&#92;&quot;OST&#92;&quot;:2681857,&#92;&quot;NORD&#92;&quot;:1251991,&#92;&quot;site_ids&#92;&quot;:[7,2960,3282,3932,4257],&#92;&quot;n_sites&#92;&quot;:5},{&#92;&quot;OST&#92;&quot;:2682360,&#92;&quot;NORD&#92;&quot;:1248448,&#92;&quot;site_ids&#92;&quot;:[722,2320,2637,2962],&#92;&quot;n_sites&#92;&quot;:4},{&#92;&quot;OST&#92;&quot;:2683573,&#92;&quot;NORD&#92;&quot;:1248545,&#92;&quot;site_ids&#92;&quot;:[8,2993,3918,3925],&#92;&quot;n_sites&#92;&quot;:4},{&#92;&quot;OST&#92;&quot;:2682278,&#92;&quot;NORD&#92;&quot;:1248325,&#92;&quot;site_ids&#92;&quot;:[55,1997,2319,3597],&#92;&quot;n_sites&#92;&quot;:4},{&#92;&quot;OST&#92;&quot;:2682933,&#92;&quot;NORD&#92;&quot;:1248821,&#92;&quot;site_ids&#92;&quot;:[5,2997,3917,3926],&#92;&quot;n_sites&#92;&quot;:4},{&#92;&quot;OST&#92;&quot;:2682873,&#92;&quot;NORD&#92;&quot;:1245891,&#92;&quot;site_ids&#92;&quot;:[6,3919,3927,5002],&#92;&quot;n_sites&#92;&quot;:4},{&#92;&quot;OST&#92;&quot;:2684006,&#92;&quot;NORD&#92;&quot;:1246566,&#92;&quot;site_ids&#92;&quot;:[54,3598,4270],&#92;&quot;n_sites&#92;&quot;:3},{&#92;&quot;OST&#92;&quot;:2682647,&#92;&quot;NORD&#92;&quot;:1250364,&#92;&quot;site_ids&#92;&quot;:[16,3012,4237],&#92;&quot;n_sites&#92;&quot;:3},{&#92;&quot;OST&#92;&quot;:2683457,&#92;&quot;NORD&#92;&quot;:1247065,&#92;&quot;site_ids&#92;&quot;:[62,3008,4267],&#92;&quot;n_sites&#92;&quot;:3}]&quot;' data-total-rows='20' data-total-columns='4' data-max-columns='50' data-banner-text='&quot;&quot;' data-pagination='true' data-page-size='10' data-field-types='[[&quot;OST&quot;,[&quot;integer&quot;,&quot;i64&quot;]],[&quot;NORD&quot;,[&quot;integer&quot;,&quot;i64&quot;]],[&quot;site_ids&quot;,[&quot;unknown&quot;,&quot;list[i64]&quot;]],[&quot;n_sites&quot;,[&quot;integer&quot;,&quot;u32&quot;]]]' data-show-filters='true' data-show-download='true' data-show-search='true' data-show-column-summaries='true' data-show-data-types='true' data-show-page-size-selector='true' data-show-column-explorer='true' data-show-chart-builder='true' data-row-headers='[]' data-hidden-columns='[]' data-has-stable-row-id='false' data-lazy='false' data-preload='false'></marimo-table></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "44 distinct coordinate pairs for 85 bike sites\n",
+          "mimetype": "text/plain"
+        }
+      ]
+    }
+  ]
+}

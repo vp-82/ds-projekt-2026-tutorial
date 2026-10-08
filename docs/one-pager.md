@@ -15,7 +15,7 @@ Nothing else came with it: no time span, no definition of cycling, no place.
 - The table has the average number of bikes per day and the change against the first year.
 - A chart is a view of the table, not the result.
 
-**Unit of the result:** one row per counting site and year.
+**Unit of the result:** one row per place and year. Changed on 2026-10-08 from one row per counting site and year, because a place gets a new site ID every few years, so site IDs cannot be followed across years (see `docs/log.md`).
 
 Open:
 - Which years are covered.
