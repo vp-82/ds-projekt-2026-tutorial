@@ -25,14 +25,16 @@ Open:
 
 ## How
 
-**Source:** the open data portal of the city of Zurich, dataset "Daten der automatischen Fussgänger- und Velozählung, Viertelstundenwerte". One CSV per year with counts per counter and quarter hour. Known so far only from the portal description. It has not been opened.
+**Source:** the open data portal of the city of Zurich, dataset "Daten der automatischen Fussgänger- und Velozählung, Viertelstundenwerte". The pipeline uses the single all-years file (`verkehrszaehlungen_werte_fussgaenger_velo_alle_jahre.parquet`) with counts per counter and quarter hour, not the yearly CSVs. Changed on 2026-10-08, because it is one download and the exploration already ran on it (see `docs/log.md`). Known limit: when we looked, its data ended on 6 June 2026.
 
 **Loop one (all days):**
-1. Download the yearly files.
+1. Download the all-years file.
 2. Sum the quarter hours to bikes per place and day.
 3. Decide which days of a place are complete.
 4. Keep the places that can be compared across years.
 5. Average per place and year, then compute the change against the first year.
+
+**First table:** one row per place and year, with the number of days that have data and the average number of bikes per day on those days. Which place-years count as comparable stays open.
 
 **Loop two (dry weekdays):** repeat the comparison on dry weekdays only. This needs a second source, the city's daily weather data.
 

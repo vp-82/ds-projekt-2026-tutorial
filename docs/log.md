@@ -12,3 +12,9 @@
 
 Open:
 - Two coordinate pairs lie one metre apart (2683405/1251617 and 2683406/1251617) and may be one place.
+
+## Decision · 2026-10-08 · source and first table
+
+The pipeline uses the single all-years file from the portal, not the yearly CSVs, because it is one download and the exploration already ran on it. Known limit: when we looked, its data ended on 6 June 2026. The first table has one row per place and year, with the number of days that have data and the average number of bikes per day on those days. Which place-years count as comparable stays open.
+
+**Revisit:** when newer data or the yearly files are needed.
