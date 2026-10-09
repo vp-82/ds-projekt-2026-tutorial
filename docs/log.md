@@ -56,9 +56,9 @@ Rows from the same site ID for the same quarter hour add up, because that hour r
 
 **Delegated:** the change to `place_year_table`, the issue text (#6) and the check against the real data.
 
-**Mine:** both decisions, the fixture row and the expected value of 7 bikes per day for place 1000/2000 in 2020.
+**Mine:** both decisions, the fixture row and the expected value of 7 bikes per day for place 1000/2000 in 2020; later the fixture row `3,2020-03-01T08:00,2,0,,,3000,4000` and the expected value of 17 bikes per day for place 3000/4000 in 2020 (pins that rows of the same site ID add up).
 
-**Delegated (later):** adding the user's fixture row `3,2020-03-01T08:00,2,0,,,3000,4000`, the expected value of 17 bikes per day for place 3000/4000 in 2020 (pins that rows of the same site ID add up), the test update and the docstring of `place_year_table`.
+**Delegated (later):** the test update and the docstring of `place_year_table`.
 
 **Checks passed:**
 - The test failed before the change (9.0 instead of 7.0) and passes after it; four tests green.
