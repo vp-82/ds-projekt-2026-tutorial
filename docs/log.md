@@ -43,3 +43,22 @@ A row with only one of VELO_IN or VELO_OUT counts the missing side as 0, because
 **Checks passed:**
 - `uv sync --locked --dev` and `uv run pytest tests` locally with uv 0.7.12: four tests green.
 - `uv sync --locked --dev` locally with uv 0.12.23 accepts the existing `uv.lock`.
+
+## Decision · 2026-10-09 · one quarter hour under two site IDs
+
+When a place has rows from more than one site ID for the same quarter hour, that quarter hour counts once, with the highest total (VELO_IN + VELO_OUT) of those site IDs. This resolves the known limit from 2026-10-08: at place 2682278/1248325 on 2017-09-08 00:00, site ID 2319 (40 bikes) counts and site ID 1997 (31 bikes) does not. The fixture pins it with a second site ID for place 1000/2000 at 2020-03-01 08:00 (issue #6). It is the only such quarter hour in the data; the 2017 row of that place goes from 4631.565714 to 4631.477143 bikes per day, and no other row of the table changes.
+
+## Decision · 2026-10-09 · one quarter hour twice under the same site ID
+
+Rows from the same site ID for the same quarter hour add up, because that hour really happens twice when the clocks go back. This covers 560 of the 604 such quarter hours, all at 02:00–02:45 on the last Sunday in October. Known limit: the other 44 (11 places, 2013-03-31 03:00–03:45) are unexplained, since the clocks go forward that night; they also add up and stay as they are.
+
+## AI use · 2026-10-09 · one quarter hour under two site IDs
+
+**Delegated:** the change to `place_year_table`, the issue text (#6) and the check against the real data.
+
+**Mine:** both decisions, the fixture row and the expected value of 7 bikes per day for place 1000/2000 in 2020.
+
+**Checks passed:**
+- The test failed before the change (9.0 instead of 7.0) and passes after it; four tests green.
+- After deleting `data/derived/place_year.parquet` and rebuilding: 367 place-years and 44 places as before, and only the 2017 row of place 2682278/1248325 differs from the old table.
+- A first version took the highest count over all rows of a quarter hour and would also have collapsed the 604 same-ID repeats; it was narrowed to apply across site IDs only.
