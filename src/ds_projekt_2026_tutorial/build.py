@@ -17,4 +17,4 @@ def main() -> None:
 
     raw = download(URL, RAW_DIR, force=args.force)
     counts = load(raw, DERIVED_DIR / "counts.parquet", force=args.force)
-    derive(counts, DERIVED_DIR / "place_year.parquet", force=args.force)
+    derive(counts, DERIVED_DIR / "place_year.parquet", force=False)
