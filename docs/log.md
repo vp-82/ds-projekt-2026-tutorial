@@ -67,7 +67,7 @@ Rows from the same site ID for the same quarter hour add up, because that hour r
 
 ## Decision · 2026-10-09 · no review run for commits by claude[bot]
 
-The Claude Code Review job skips when the run was started by `claude[bot]`, for example when @claude pushes a commit to a pull request. The action refuses runs started by a bot ("Workflow initiated by non-human actor: claude (type: Bot)"), so the check turned red on PR #7 and had to be ignored; a skipped check says what happened. The bot is not added to `allowed_bots` (issue #8).
+The Claude Code Review job skips when the run was started by `claude[bot]`, for example when @claude pushes a commit to a pull request. The action refuses runs started by a bot ("Workflow initiated by non-human actor: claude (type: Bot)"), so the check turned red on PR #7 and had to be ignored; a skipped check says what happened. The bot is not added to `allowed_bots` (issue #8). Commits pushed by @claude are read by a person before merging, because no review runs on them.
 
 ## AI use · 2026-10-09 · no review run for commits by claude[bot]
 
