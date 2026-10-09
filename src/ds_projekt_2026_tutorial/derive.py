@@ -7,14 +7,20 @@ def place_year_table(counts: pl.DataFrame) -> pl.DataFrame:
     """One row per place (OST, NORD) and year: days with bike data and average bikes per day.
 
     Rows without any bike count drop out. A missing direction counts as 0.
-    Site IDs at the same coordinates add up into one place.
+    Site IDs at the same coordinates form one place. Rows of the same site ID
+    for the same quarter hour add up (the hour repeats when the clocks go back).
+    When several site IDs record the same quarter hour at a place, it counts
+    once, with the highest total.
     """
     return (
         counts.filter(pl.col("VELO_IN").is_not_null() | pl.col("VELO_OUT").is_not_null())
-        .with_columns(
-            bikes=pl.col("VELO_IN").fill_null(0) + pl.col("VELO_OUT").fill_null(0),
-            date=pl.col("DATUM").dt.date(),
-        )
+        .with_columns(bikes=pl.col("VELO_IN").fill_null(0) + pl.col("VELO_OUT").fill_null(0))
+        # Rows of one site ID add up; across site IDs only the highest counts.
+        .group_by("OST", "NORD", "DATUM", "FK_STANDORT")
+        .agg(pl.col("bikes").sum())
+        .group_by("OST", "NORD", "DATUM")
+        .agg(pl.col("bikes").max())
+        .with_columns(date=pl.col("DATUM").dt.date())
         .group_by("OST", "NORD", "date")
         .agg(pl.col("bikes").sum())
         .group_by("OST", "NORD", pl.col("date").dt.year().alias("year"))

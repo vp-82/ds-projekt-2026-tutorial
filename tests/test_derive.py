@@ -17,7 +17,7 @@ def test_place_year_table_on_fixture():
             "NORD": [2000, 2000, 4000],
             "year": [2019, 2020, 2020],
             "days_with_bikes": [2, 1, 1],
-            "bikes_per_day": [5.0, 6.0, 15.0],
+            "bikes_per_day": [5.0, 7.0, 17.0],
         }
     )
     assert_frame_equal(table, expected, check_dtypes=False)
