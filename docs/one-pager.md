@@ -12,16 +12,18 @@ Nothing else came with it: no time span, no definition of cycling, no place.
 **What the reader gets:** a table, with one sentence above it.
 
 - The sentence gives yes or no for the city, plus how many places grew, shrank or cannot be compared.
-- The table has the average number of bikes per day and the change against the first year.
+- The table has the average number of bikes per day and the change from 2019 to 2025.
 - A chart is a view of the table, not the result.
 
 **Unit of the result:** one row per place and year. Changed on 2026-10-08 from one row per counting site and year, because a place gets a new site ID every few years, so site IDs cannot be followed across years (see `docs/log.md`).
 
-Open:
-- Which years are covered.
-- Which days of a place count as comparable.
-- What makes the answer "yes" for the city. Must be decided before the first comparison is computed, so the rule is not chosen after seeing the result.
-- When a place counts as grown or shrunk, for example whether a small change counts. Must be decided before the first comparison is computed, so the rule is not chosen after seeing the result.
+**Rules for the first answer:** decided on 2026-10-09, before any comparison was computed (see `docs/log.md`).
+
+- Years: 2025, the last full year, against 2019, the last full year before the pandemic.
+- Days: a day counts when it has any bike data. Known limit: a day with a partial outage counts as a full day and lowers the average.
+- Comparable: a place counts in a year when it has bike data on at least 300 days of that year. A place is comparable when that holds in both years.
+- Change: a place grew when its bikes per day rose by more than 5 percent, shrank when they fell by more than 5 percent, and is unchanged in between.
+- Answer for the city: yes when more than half of the comparable places grew.
 
 ## How
 
@@ -30,16 +32,15 @@ Open:
 **Loop one (all days):**
 1. Download the all-years file.
 2. Sum the quarter hours to bikes per place and day.
-3. Decide which days of a place are complete.
+3. Count the days of a place that have any bike data.
 4. Keep the places that can be compared across years.
-5. Average per place and year, then compute the change against the first year.
+5. Average per place and year, then compute the change from 2019 to 2025.
 
-**First table:** one row per place and year, with the number of days that have data and the average number of bikes per day on those days. Which place-years count as comparable stays open.
+**First table:** one row per place and year, with the number of days that have data and the average number of bikes per day on those days. A place-year counts when it has bike data on at least 300 days.
 
 **Loop two (dry weekdays):** repeat the comparison on dry weekdays only. This needs a second source, the city's daily weather data.
 
 Open:
-- The rule for "comparable" stays open until the data has been seen.
 - What counts as a dry weekday for loop two: what counts as "dry" and which days count as weekdays.
 
 ## Non-goals
