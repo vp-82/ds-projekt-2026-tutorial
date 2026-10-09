@@ -64,3 +64,17 @@ Rows from the same site ID for the same quarter hour add up, because that hour r
 - The test failed before the change (9.0 instead of 7.0) and passes after it; four tests green.
 - After deleting `data/derived/place_year.parquet` and rebuilding: 367 place-years and 44 places as before, and only the 2017 row of place 2682278/1248325 differs from the old table.
 - A first version took the highest count over all rows of a quarter hour and would also have collapsed the 604 same-ID repeats; it was narrowed to apply across site IDs only.
+
+## Decision · 2026-10-09 · no review run for commits by claude[bot]
+
+The Claude Code Review job skips when the run was started by `claude[bot]`, for example when @claude pushes a commit to a pull request. The action refuses runs started by a bot ("Workflow initiated by non-human actor: claude (type: Bot)"), so the check turned red on PR #7 and had to be ignored; a skipped check says what happened. The bot is not added to `allowed_bots` (issue #8). Commits pushed by @claude are read by a person before merging, because no review runs on them.
+
+## AI use · 2026-10-09 · no review run for commits by claude[bot]
+
+**Delegated:** the job condition in `.github/workflows/claude-code-review.yml` and the issue text (#8).
+
+**Mine:** the decision to skip rather than allow the bot.
+
+**Checks passed:**
+- The two red runs on PR #7 (37901246364, 37908694827) had actor `claude[bot]` and failed with the non-human actor error.
+- On this pull request, the commit pushed by @claude (01cdae6) shows Claude Code Review as skipped and Tests as green.
