@@ -58,6 +58,8 @@ Rows from the same site ID for the same quarter hour add up, because that hour r
 
 **Mine:** both decisions, the fixture row and the expected value of 7 bikes per day for place 1000/2000 in 2020.
 
+**Delegated (later):** adding the user's fixture row `3,2020-03-01T08:00,2,0,,,3000,4000`, the expected value of 17 bikes per day for place 3000/4000 in 2020 (pins that rows of the same site ID add up), the test update and the docstring of `place_year_table`.
+
 **Checks passed:**
 - The test failed before the change (9.0 instead of 7.0) and passes after it; four tests green.
 - After deleting `data/derived/place_year.parquet` and rebuilding: 367 place-years and 44 places as before, and only the 2017 row of place 2682278/1248325 differs from the old table.
