@@ -8,7 +8,7 @@ Sorted by importance (high first), then by evidence (low first), so important as
 |---|---|---|---|---|
 | 1 | **Stable counting:** each site counts bikes with the same error in every year, with no new sensor, recalibration or change of method in between. | high | low | untested |
 | 2 | **Same place:** a counter ID means the same physical place in every year, so a site that moved never keeps its old ID. | high | low | holds: one ID is one place, but a place has several IDs over time, see log |
-| 7 | **Enough sites:** enough sites have comparable data in both the first year and later years to support a sentence about the whole city. | high | low | untested |
+| 7 | **Enough sites:** enough sites have comparable data in both the first year and later years to support a sentence about the whole city. | high | low | 10 of 44 places are comparable for 2019 and 2025, see log |
 | 8 | **Sites stand for the city:** the set of counting sites is a fair enough basis for the planner to answer yes or no for Zurich as a whole. | high | low | untested |
 | 11 | **Weather comparable across years:** weather is comparable across years, so a wet year does not look like a decline in cycling. | high | low | untested |
 | 12 | **Not answered already:** nobody has answered this already, for example the city itself in a yearly report. | high | low | untested |
