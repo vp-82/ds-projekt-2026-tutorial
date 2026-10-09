@@ -77,6 +77,4 @@ The Claude Code Review job skips when the run was started by `claude[bot]`, for 
 
 **Checks passed:**
 - The two red runs on PR #7 (37901246364, 37908694827) had actor `claude[bot]` and failed with the non-human actor error.
-
-Open:
-- Pending: a commit pushed by @claude on this pull request shows Claude Code Review as skipped.
+- On this pull request, the commit pushed by @claude (01cdae6) shows Claude Code Review as skipped and Tests as green.
