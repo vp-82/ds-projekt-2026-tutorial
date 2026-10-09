@@ -128,3 +128,12 @@ These rules are fixed before any comparison is computed, so they are not chosen 
 - Seven tests green.
 - Outside the tests, a one-off run confirmed that exactly 5 percent counts as unchanged and that two reasons are joined with " and ".
 - On the real data: 44 places, 10 comparable, as in the hypothesis of 2026-10-09 on comparable places. Place 2681319/1248665 checked by hand: 863.835616 bikes per day in 2019 (365 days) and 1240.101648 in 2025 (364 days) give +43.56 percent.
+
+## Decision · 2026-10-09 · repository settings that are not files
+
+Two settings live on GitHub, not in the repository, and are recorded here.
+
+- Ruleset "protect main" (id 24737527, Settings → Rules → Rulesets): changes reach main only through a pull request; the `tests` check from GitHub Actions must pass; nobody can bypass it, including the owner; main cannot be deleted or force-pushed; no approvals are required, because I work alone. A branch does not need to be up to date with main before merging. GitHub added `require_extra_approval_for_unattributed_changes: true` on its own; its effect here is unknown and it has not blocked a merge so far.
+- Head branches are deleted automatically after a pull request is merged (Settings → General → Pull Requests). Local copies are deleted by hand.
+
+Checked on 2026-10-08 with PR #4: a failing `tests` check blocked the merge.
