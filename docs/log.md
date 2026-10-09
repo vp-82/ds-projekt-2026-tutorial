@@ -78,3 +78,32 @@ The Claude Code Review job skips when the run was started by `claude[bot]`, for 
 **Checks passed:**
 - The two red runs on PR #7 (37901246364, 37908694827) had actor `claude[bot]` and failed with the non-human actor error.
 - On this pull request, the commit pushed by @claude (01cdae6) shows Claude Code Review as skipped and Tests as green.
+
+## Decision · 2026-10-09 · rules for the first answer
+
+These rules are fixed before any comparison is computed, so they are not chosen after seeing the result.
+
+- Years: compare 2025, the last full year, with 2019, the last full year before the pandemic.
+- Days: a day counts when it has any bike data, as the place-year table does now. Known limit: a day with a partial outage counts as a full day and lowers the average.
+- Comparable: a place counts in a year when it has bike data on at least 300 days of that year. A place is comparable when that holds in both years.
+- Change: a place grew when its bikes per day rose by more than 5 percent, shrank when they fell by more than 5 percent, and is unchanged in between.
+- Answer for the city: yes when more than half of the comparable places grew.
+
+## Hypothesis · 2026-10-09 · Enough places are comparable to answer for the city
+
+**Expected:** at least 20 of the 44 places are comparable.
+
+**Test:** count the places with bike data on at least 300 days in both 2019 and 2025, in `data/derived/place_year.parquet`. Only this count was run; no change between the years was computed.
+
+**Result:** 10 of the 44 places are comparable, against the expected 20. 14 places reach 300 days in 2019 and 19 in 2025.
+
+**Decision:** the rules stay. 10 comparable places are fewer than expected, and they are enough for a first answer as long as the answer says so. The sentence for the city names the 10 comparable places and the 34 that cannot be compared. Finding a pair of years with more comparable places is a question for a later loop.
+
+## AI use · 2026-10-09 · rules for the first answer
+
+**Delegated:** writing the rules into `docs/one-pager.md` and `docs/log.md`, and the count for the hypothesis.
+
+**Mine:** the rules, the hypothesis and its expected value, and the decision that follows from the count.
+
+**Checks passed:**
+- `place_year.parquet` was built after the last change to the derive logic (only the docstring changed since): 44 places, years 2009 to 2026.
