@@ -107,3 +107,24 @@ These rules are fixed before any comparison is computed, so they are not chosen 
 
 **Checks passed:**
 - `place_year.parquet` was built after the last change to the derive logic (only the docstring changed since): 44 places, years 2009 to 2026.
+
+## Hypothesis · 2026-10-09 · Cycling grew at the comparable places
+
+**Expected:** at least 6 of the 10 comparable places grew from 2019 to 2025.
+
+**Test:** the answer step of `uv run build` applies the rules for the first answer to `data/derived/place_year.parquet` and counts the places that grew, shrank, are unchanged or cannot be compared.
+
+**Result:** 8 of the 10 comparable places grew, against the expected 6; 2 shrank (−7.4 and −20.4 percent) and none is unchanged. The growth ranges from +5.4 to +89.5 percent; the smallest, place 2682375/1247055, lies just above the 5 percent band. For the city: yes. 34 places cannot be compared.
+
+**Decision:** the first answer stands. Yes, cycling grew from 2019 to 2025 at 8 of the 10 places that can be compared. The answer covers these 10 places only. It says nothing about the 34 places that cannot be compared, and whether the counting places stand for the whole city stays an untested assumption. Loop one is done. Loop two asks whether the answer holds on dry weekdays.
+
+## AI use · 2026-10-09 · the first answer
+
+**Delegated:** the answer step of `uv run build` (`place_change_table`, `city_sentence`, `answer`), the tests in `tests/test_answer.py` and the README update.
+
+**Mine:** the rules, the fixture `tests/fixtures/place_year_small.csv` and the expected results for its five places and for the city, the wording of the reasons and that two reasons are joined with " and ", the hypothesis and the decision that follows from it.
+
+**Checks passed:**
+- Seven tests green.
+- Outside the tests, a one-off run confirmed that exactly 5 percent counts as unchanged and that two reasons are joined with " and ".
+- On the real data: 44 places, 10 comparable, as in the hypothesis of 2026-10-09 on comparable places. Place 2681319/1248665 checked by hand: 863.835616 bikes per day in 2019 (365 days) and 1240.101648 in 2025 (364 days) give +43.56 percent.
