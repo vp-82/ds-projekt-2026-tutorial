@@ -302,7 +302,14 @@ The date of a day is the first 10 characters of `Datum`, the local date as the f
 
 ## Decision · 2026-10-23 · a package starts as an issue
 
-From now on every package starts as an issue that a person writes before the branch exists, with the "Package" form in `.github/ISSUE_TEMPLATE/package.yml`. Its five required fields are what exists at the end, which question it serves, done when, kind and size, and out of scope. `CLAUDE.md` gets the rule in its Workflow section: a package starts as an issue written with the Package form, and its pull request closes that issue.
+From now on every package starts as an issue that a person writes before the branch exists, with the "Package" form in `.github/ISSUE_TEMPLATE/package.yml`. Its five required fields are what exists at the end, which question it serves, done when, kind and size, and out of scope. `CLAUDE.md` gets the rule in its Workflow section: a package starts as an issue that a person writes with the Package form before the branch exists, and its pull request closes that issue. Known limit: this package itself started before the form existed, so its pull request (#29) closes no issue.
+
+Open:
+- The reason for the decision.
+- The form says that more than about 200 lines needs a reason; `CLAUDE.md` says to propose a split when larger. Whether a reason is enough.
+- Whether blank issues stay possible (no `.github/ISSUE_TEMPLATE/config.yml`); `gh issue create` cannot fill the form.
+- Whether package issues get a label; the title prefix can be edited away.
+- Whether GitHub shows the form under New issue after the merge.
 
 ## AI use · 2026-10-23 · package issue form
 
